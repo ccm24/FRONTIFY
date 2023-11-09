@@ -4,11 +4,13 @@ import { FaSearch } from "react-icons/fa";
 
 
 
-export const SearchBar = () => { 
+export const SearchBar = ({onSearchTextChange}) => { 
   return (
   <div className="input-wrapper">
       <FaSearch id="search-icon" />
-      <input placeholder="Escribe para buscar ..." />
+      <input placeholder="Escribe para buscar ..."
+        onChange={e => onSearchTextChange(e.target.value)}
+       />
     </div>
    
   );

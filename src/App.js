@@ -16,7 +16,7 @@ function App() {
       <Routes>
         <Route index element={<FrontPage />} />
         <Route path="albums" element={<AlbumCatalog />} />
-        <Route path="SearchPage" element={<SearchPage />} />
+        <Route path="search" element={<SearchPage />} />
       </Routes>
  
     </div>

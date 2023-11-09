@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import "./AlbumCatalog.css";
 import Header from "./Header";
 import SpotifyApiService from "../services/SpotifyApiService";
+import { useNavigate } from "react-router";
 
 function AlbumCatalog() {
   const [accessToken, setAccessToken] = useState(null);
@@ -49,6 +50,8 @@ function AlbumCatalog() {
   const [albums, setAlbums] = useState([]);
   const [downloadAlbums, setDownloadAlbums] = useState(false);
 
+  const navigate = useNavigate();
+
   useEffect(() => {
     if (downloadAlbums) {
       let spotify = new SpotifyApiService()
@@ -60,6 +63,7 @@ function AlbumCatalog() {
   return (
     <div classname="overallPage">
       <Header />
+      <button onClick={() => navigate("/search")}>Search</button>
       <div className="cards">
         {albums.map((album) => (
           <div key={album.id} className="cardsContent">

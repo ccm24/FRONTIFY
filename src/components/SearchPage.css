@@ -6,7 +6,7 @@
     margin-left: 1500px;
   }
   
-  input{
+  input {
     background-color: transparent;
     border: 0px;
     height: 100%;
@@ -15,8 +15,8 @@
     outline: none;
     
   }
-  
-  .search-bar-container {
+
+ .search-bar-container {
     padding-top: 5vh;
     margin-left: 5vh;
   }

@@ -21,7 +21,7 @@ export default class SpotifyApiService {
     }
 
     async getSearchResults(accessToken, text) {
-        const URL = `https://api.spotify.com/v1/search?q=${text}`;
+        const URL = `https://api.spotify.com/v1/search?type=album&q=${text}`;
 
         const options = {
             method: "GET",
