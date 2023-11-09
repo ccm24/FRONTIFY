@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "./SearchPage.css";
 import Header from "./Header";
+import SpotifyApiService from "../services/SpotifyApiService";
 
 function SearchResult() {
   const [accessToken, setAccessToken] = useState(null);
@@ -48,25 +49,12 @@ function SearchResult() {
   const [albums, setAlbums] = useState([]);
   const [downloadAlbums, setDownloadAlbums] = useState(false);
 
-  const URL = "https://api.spotify.com/v1/search";
-
-  const options = {
-    method: "GET",
-    headers: {
-      "Content-Type": "application/json",
-      Authorization: "Bearer " + accessToken,
-    },
-  };
-
   useEffect(() => {
+    let text = "eminem"
     if (downloadAlbums) {
-      fetch(URL, options)
-        .then((response) => response.json())
-        .then((result) => {
-          setAlbums(result.albums.items);
-          console.log(result);
-        })
-        .catch((err) => console.error(err));
+      let spotify = new SpotifyApiService()
+      spotify.getSearchResults(accessToken, text)
+        .then(r => setAlbums(r))
     }
   }, [downloadAlbums]);
 

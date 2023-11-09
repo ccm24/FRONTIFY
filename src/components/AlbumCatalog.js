@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "./AlbumCatalog.css";
 import Header from "./Header";
+import SpotifyApiService from "../services/SpotifyApiService";
 
 function AlbumCatalog() {
   const [accessToken, setAccessToken] = useState(null);
@@ -43,31 +44,16 @@ function AlbumCatalog() {
     getToken();
   }, []);
 
-  // Search Function
+  // Album Catalog Function
 
   const [albums, setAlbums] = useState([]);
   const [downloadAlbums, setDownloadAlbums] = useState(false);
 
-  const URL =
-    "https://api.spotify.com/v1/browse/new-releases?country=ES&limit=30";
-
-  const options = {
-    method: "GET",
-    headers: {
-      "Content-Type": "application/json",
-      Authorization: "Bearer " + accessToken,
-    },
-  };
-
   useEffect(() => {
     if (downloadAlbums) {
-      fetch(URL, options)
-        .then((response) => response.json())
-        .then((result) => {
-          setAlbums(result.albums.items);
-          console.log(result);
-        })
-        .catch((err) => console.error(err));
+      let spotify = new SpotifyApiService()
+      spotify.getNewReleases(accessToken)
+        .then(a => setAlbums(a))
     }
   }, [downloadAlbums]);
 
