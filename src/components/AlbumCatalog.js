@@ -5,6 +5,7 @@ import SpotifyApiService from "../services/SpotifyApiService";
 import Banner from "../components/Banner"
 import { useNavigate } from "react-router";
 import { FaSearch } from "react-icons/fa";
+import isotipo from "../assets/img/Isotipo.svg";
 
 function AlbumCatalog() {
   const [accessToken, setAccessToken] = useState(null);
@@ -63,12 +64,13 @@ function AlbumCatalog() {
 
   return (
     <div classname="overallPage">
-      <div>
+      <div className="header"> 
         <img className="logoAlbumPage" src={completeLogo} />
-      </div>
-      <button className="lupita" onClick={() => navigate("/search")}>
-      <FaSearch id="albumCatalogIcon" />
+        <img className="isotipo" src={isotipo} />
+        <button className="lupita" onClick={() => navigate("/search")}>
+          <FaSearch id="albumCatalogIcon" />
         </button>
+      </div>
       <Banner />
       <div className="cards">
         {albums.map((album) => (

@@ -1,9 +1,41 @@
-.logoAlbumPage {
+.headerSecondPage{
   display: flex;
-  justify-content: center;
+  justify-content:space-between;
   align-items: center;
-  margin-left:12rem ;
-  width: 200px;
-  height: auto;
+  flex-direction: row-reverse;
+  margin: 2rem 10rem;
 }
-               
+
+.logoAlbumPage {
+  width: 15rem;
+  margin-right: 68rem;
+}
+
+.isotipo{
+  display: none;
+}
+
+@media (max-width: 600px) {
+  .logoAlbumPage{
+    display: none;
+  }
+
+  .isotipo{
+    display: flex;
+  }
+
+  .headerSecondPage{
+    margin: 0.2rem 2rem;
+  }
+}
+
+@media ((max-width: 1024px) and (min-width: 601px)) {
+  .logoAlbumPage{
+    width: 10rem;
+    margin-right: 21rem;
+  }
+
+  .headerSecondPage{
+    margin: 0.2rem 3rem;
+  }
+}

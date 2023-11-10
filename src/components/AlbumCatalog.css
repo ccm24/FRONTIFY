@@ -3,6 +3,17 @@
   src: URL("../assets/fonts/MYRIADPRO-REGULAR.OTF");
 }
 
+.header{
+  display: flex;
+  justify-content:space-between;
+  align-items: center;
+  margin: 2rem 9.5rem;
+}
+
+.isotipo{
+  display: none;
+}
+
 .cards {
   width: 100%;
   display: flex;
@@ -59,6 +70,19 @@
 }
 
 @media (max-width: 600px) {
+  .header{
+    margin: 0.5rem 2rem;
+  }
+  
+  .isotipo{
+    display: flex;
+    width: 4rem;
+  }
+
+  .logoAlbumPage{
+    display: none;
+  }
+
   .cards {
     width: 100%;
     padding: 2rem;
@@ -76,6 +100,14 @@
 }
 
 @media ((max-width: 1024px) and (min-width: 601px)) {
+  .header{
+    margin: 1.5rem 3rem;
+  }
+  
+  .banner{
+    margin: 0 0;
+  }
+
   .cards {
     width: 100%;
     gap: 4rem;

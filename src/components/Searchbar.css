@@ -7,11 +7,13 @@ input {
 }
 
 .input-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-color: white;
-  width: 15%;
-  padding: 5px;
-  border-radius: 20px;
-  margin-left: 1465px;
+  width: 20rem;
+  padding: 0.5rem;
+  border-radius: 2rem;
 }
 
 .search-bar-container {
@@ -20,11 +22,34 @@ input {
 }
 
 #search-icon {
-  width: 50px;
+margin-right: 1rem;
   color: #0a0a0a;
 }
 
-.imglog {
-  width: 228px;
-  height: 121px;
+@media (max-width: 600px) {
+  .input-wrapper{
+    width: 10rem;
+  }
+
+  .search{
+    font-size: 0.7rem;
+  }
+
+  #search-icon {
+    margin-right: 0.4rem;
+  }
+}
+
+@media ((max-width: 1024px) and (min-width: 601px)) {
+  .input-wrapper{
+    width: 15rem;
+  }
+
+  .search{
+    font-size: 1rem;
+  }
+
+  #search-icon {
+    margin-right: 0.8rem;
+  }
 }

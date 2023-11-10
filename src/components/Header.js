@@ -1,12 +1,16 @@
 import completeLogo from "../assets/img/Isologo.svg";
+import isotipo from "../assets/img/Isotipo.svg"
 import "./Header.css";
 import { SearchBar } from "./SearchBar";
+import { Link } from "react-router-dom";
 
-function Header({ onSearchTextChange }) {
+function Header({onSearchTextChange}) {
   return (
-    <div>
+    <div className="headerSecondPage">
       <SearchBar onSearchTextChange={onSearchTextChange} />
-      <img className="logoAlbumPage" src={completeLogo} />
+      <Link to="/albums"> <img className="logoAlbumPage" src={completeLogo} /></Link>
+      <Link to="/albums"> <img className="isotipo" src={isotipo} /></Link>
+
     </div>
   );
 }

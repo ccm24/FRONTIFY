@@ -6,7 +6,7 @@ export const SearchBar = ({ onSearchTextChange }) => {
   return (
     <div className="input-wrapper">
       <FaSearch id="search-icon" />
-      <input
+      <input className="search"
         placeholder="¿Qué quieres escuchar?"
         onChange={(e) => onSearchTextChange(e.target.value)}
       />

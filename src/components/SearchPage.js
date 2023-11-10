@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import "./SearchPage.css";
 import Header from "./Header";
 import SpotifyApiService from "../services/SpotifyApiService";
 
