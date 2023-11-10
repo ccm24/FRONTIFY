@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "./AlbumCatalog.css";
-import Header from "./Header";
+import completeLogo from "../assets/img/Isologo.svg";
 import SpotifyApiService from "../services/SpotifyApiService";
 import { useNavigate } from "react-router";
 
@@ -54,15 +54,16 @@ function AlbumCatalog() {
 
   useEffect(() => {
     if (downloadAlbums) {
-      let spotify = new SpotifyApiService()
-      spotify.getNewReleases(accessToken)
-        .then(a => setAlbums(a))
+      let spotify = new SpotifyApiService();
+      spotify.getNewReleases(accessToken).then((a) => setAlbums(a));
     }
   }, [downloadAlbums]);
 
   return (
     <div classname="overallPage">
-      <Header />
+      <div>
+        <img className="logoAlbumPage" src={completeLogo} />
+      </div>
       <button onClick={() => navigate("/search")}>Search</button>
       <div className="cards">
         {albums.map((album) => (

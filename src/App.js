@@ -7,6 +7,8 @@ import SearchPage from "./components/SearchPage";
 function App() {
   return (
     <div className="App">
+      <div className="search-bar-container"></div>
+
       <Routes>
         <Route index element={<FrontPage />} />
         <Route path="albums" element={<AlbumCatalog />} />
