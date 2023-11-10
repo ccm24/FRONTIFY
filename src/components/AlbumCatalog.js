@@ -4,6 +4,7 @@ import completeLogo from "../assets/img/Isologo.svg";
 import SpotifyApiService from "../services/SpotifyApiService";
 import Banner from "../components/Banner"
 import { useNavigate } from "react-router";
+import { FaSearch } from "react-icons/fa";
 
 function AlbumCatalog() {
   const [accessToken, setAccessToken] = useState(null);
@@ -65,7 +66,9 @@ function AlbumCatalog() {
       <div>
         <img className="logoAlbumPage" src={completeLogo} />
       </div>
-      <button onClick={() => navigate("/search")}>Search</button>
+      <button className="lupita" onClick={() => navigate("/search")}>
+      <FaSearch id="search-icon" />
+        </button>
       <Banner />
       <div className="cards">
         {albums.map((album) => (
