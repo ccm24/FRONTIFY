@@ -1,9 +1,21 @@
-.lupita{
+.lupita {
+    size: 40px;
+    height: auto;
     background-color: transparent;
     outline: none;
     border: 0px;
     height: 100%;
     margin-left: 20px;
     font-size: 1.2rem;
-    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 1930px;
+    margin-bottom: 2%;
+
+
+}
+
+#albumCatalogIcon {
+    color: white;
 }

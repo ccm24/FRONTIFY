@@ -67,7 +67,7 @@ function AlbumCatalog() {
         <img className="logoAlbumPage" src={completeLogo} />
       </div>
       <button className="lupita" onClick={() => navigate("/search")}>
-      <FaSearch id="search-icon" />
+      <FaSearch id="albumCatalogIcon" />
         </button>
       <Banner />
       <div className="cards">
