@@ -1,0 +1,26 @@
+.banner{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.img_banner{
+    width: 107rem;
+}
+
+@media (max-width: 600px) {
+    
+    .banner{
+        display: none;
+    }
+
+  }
+  
+  @media ((max-width: 1024px) and (min-width: 601px)) {
+   .img_banner{
+    width: 45rem;
+   }
+  
+
+  }
+  
