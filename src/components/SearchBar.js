@@ -1,12 +1,13 @@
 import React from "react";
 import { FaSearch } from "react-icons/fa";
+import "./SearchBar.css";
 
 export const SearchBar = ({ onSearchTextChange }) => {
   return (
     <div className="input-wrapper">
       <FaSearch id="search-icon" />
       <input
-        placeholder="Esto es una prueba ..."
+        placeholder="¿Qué quieres escuchar?"
         onChange={(e) => onSearchTextChange(e.target.value)}
       />
     </div>
