@@ -69,14 +69,15 @@
   color: #ffff;
 }
 
-@media (max-width: 600px) {
+/*Móvil*/
+@media (max-width: 1024px) {
   .header{
     margin: 0.5rem 2rem;
   }
   
   .isotipo{
     display: flex;
-    width: 4rem;
+    width: 9rem;
   }
 
   .logoAlbumPage{
@@ -99,7 +100,9 @@
   }
 }
 
-@media ((max-width: 1024px) and (min-width: 601px)) {
+
+/*Tablet*/
+@media ((max-width: 1400px) and (min-width: 1025px)) {
   .header{
     margin: 1.5rem 3rem;
   }

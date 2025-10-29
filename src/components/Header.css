@@ -7,35 +7,44 @@
 }
 
 .logoAlbumPage {
-  width: 15rem;
-  margin-right: 68rem;
+  width: 10rem;
+  margin-right: 49.5rem;
+  margin-bottom: 1rem;
 }
 
 .isotipo{
   display: none;
 }
 
-@media (max-width: 600px) {
+/*Móvil*/
+@media (max-width: 1024px) {
   .logoAlbumPage{
     display: none;
   }
 
   .isotipo{
     display: flex;
+    width: 5rem;
+    margin-right: 9.5rem;
   }
 
   .headerSecondPage{
-    margin: 0.2rem 2rem;
+    align-items: center;
+    justify-content: center;
+    margin-left: 11.3rem;
+    margin-top: 0.5rem;
   }
 }
 
-@media ((max-width: 1024px) and (min-width: 601px)) {
+/*Tablet*/
+@media ((max-width: 1400px) and (min-width: 1025px)) {
   .logoAlbumPage{
     width: 10rem;
-    margin-right: 21rem;
+    margin-right: 45rem;
+    margin-bottom: 2.5rem;
   }
 
   .headerSecondPage{
-    margin: 0.2rem 3rem;
+    margin: 1.5rem 3rem;
   }
 }

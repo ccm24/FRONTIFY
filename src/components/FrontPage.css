@@ -37,14 +37,15 @@ h1{
     border: none;
 }
 
-@media (max-width: 600px) {
+/*Móvil*/
+@media (max-width: 1024px) {
     
     .logoFrontPagePhone {
         display: flex;
         justify-content: center;
         align-items: center;
         margin: 0 auto;
-        margin-top: 40%
+        margin-top: 30%
     }
   
     .logoFrontPagePc{
@@ -52,8 +53,9 @@ h1{
     }
 
   }
-  
-  @media ((max-width: 1024px) and (min-width: 601px)) {
+
+  /*Tablet*/
+  @media ((max-width: 1400px) and (min-width: 1025px)) {
    
     .logoFrontPagePhone {
         display: none;
@@ -64,6 +66,7 @@ h1{
         justify-content: center;
         align-items: center;
         margin: 0 auto;
-        margin-top: 40%    }
+        margin-top: 2%    
+    }
   }
   

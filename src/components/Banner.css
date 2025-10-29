@@ -5,19 +5,22 @@
 }
 
 .img_banner{
-    width: 120rem;
+    width: 105rem;
     padding: 0 10rem;
 }
 
-@media (max-width: 600px) {
+/*Móvil*/
+@media (max-width: 1024px) {
     .banner{
         display: none;
+        width: 30rem;
     }
   }
-  
-@media ((max-width: 1024px) and (min-width: 601px)) {
+
+/*Tablet*/
+@media ((max-width: 1400px) and (min-width: 1025px)) {
     .img_banner{
-        width: 45rem;
+        width: 70rem;
         padding: 0;
     }
 }
